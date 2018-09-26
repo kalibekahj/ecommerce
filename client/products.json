@@ -1,0 +1,166 @@
+{
+  "products": [
+    {
+      "image": "../../static/img/Womensimg/chanel3.jpg",
+      "productId": 1,
+      "title": "N°5 Eau De Parfum Spray 1.2oz - Chanel",
+      "price": 135.00,
+      "productType": "Perfume",
+      "productCategory": "Women",
+      "brand": "Chanel"
+    },
+    {
+      "image": "../../static/img/Womensimg/joydior.jpg",
+      "productId": 2,
+      "title": "Joy by Dior - Women's Perfume - Spray 1.0 oz",
+      "price": 75.00,
+      "productType": "Perfume",
+      "productCategory": "Women",
+      "brand": "Dior"
+    },
+    {
+      "image": "../../static/img/Womensimg/acquadig.jpg",
+      "productId": 3,
+      "title": "Giorgio Armani Acqua Di Gioia Parfum Spray - 1.7 oz bottle",
+      "price": 36.64,
+      "productType": "Perfume",
+      "productCategory": "Women",
+      "brand": "Armani"
+    },
+    {
+      "image": "../../static/img/Womensimg/coachny.jpg",
+      "productId": 4,
+      "title": "Coach For Women Eau De Parfum Spray 3 Oz By Coach",
+      "price": 37.16,
+      "productType": "Perfume",
+      "productCategory": "Women",
+      "brand": "Coach"
+    },
+    {
+      "image": "../../static/img/Womensimg/dolceg.jpg",
+      "productId": 5,
+      "title": "Dolce & Gabbana For Women Edt Spray 3.3 Oz By Dolce & Gabbana",
+      "price": 80.63,
+      "productType": "Perfume",
+      "productCategory": "Women",
+      "brand": "Dolce & Gabbanna"
+    },
+    {
+      "image": "../../static/img/Womensimg/guccibam.jpg",
+      "productId": 6,
+      "title": "Gucci Bamboo For Women Eau De Parfum Spray 1.6 Oz By Gucci",
+      "price": 40.94,
+      "productType": "Perfume",
+      "productCategory": "Women",
+      "brand": "Gucci"
+    },
+    {
+      "image": "../../static/img/Womensimg/guccirush.jpg",
+      "productId": 7,
+      "title": "Gucci Rush For Women Edt Spray 1.6 Oz By Gucci",
+      "price": 37.79,
+      "productType": "Perfume",
+      "productCategory": "Women",
+      "brand": "Gucci"
+    },
+    {
+      "image": "../../static/img/Womensimg/roberto.jpeg",
+      "productId": 8,
+      "title": "Roberto Cavalli Signature For Women Eau De Parfum Spray 2.5 Oz By Roberto Cavalli",
+      "price": 33.38,
+      "productType": "Perfume",
+      "productCategory": "Women",
+      "brand": "Roberto Cavalli"
+    },
+    {
+      "image": "../../static/img/Womensimg/versacebc.jpg",
+      "productId": 9,
+      "title": "Versace Bright Crystal by Gianni Versace For her 6.7 oz Edt Spray",
+      "price": 53.95,
+      "productType": "Perfume",
+      "productCategory": "Women",
+      "brand": "Versace"
+    },
+    {
+      "image": "../../static/img/Mensimg/pradalr.jpeg",
+      "productId": 10,
+      "title": "Prada Men's Luna Rossa Sport Eau de Toilette Spray, 3.4 oz",
+      "price": 88.00,
+      "productType": "Cologne",
+      "productCategory": "Men",
+      "brand": "Prada"
+    },
+    {
+      "image": "../../static/img/Mensimg/sauvage.jpg",
+      "productId": 11,
+      "title": "Dior Men's Sauvage Eau de Toilette Spray, 2 oz.",
+      "price": 77.00,
+      "productType": "Cologne",
+      "productCategory": "Men",
+      "brand": "Dior"
+    },
+    {
+      "image": "../../static/img/Mensimg/armanieau.jpg",
+      "productId": 12,
+      "title": "Armani Eau De Nuit For Men Edt Spray 3.4 Oz By Giorgio Armani",
+      "price": 60.47,
+      "productType": "Cologne",
+      "productCategory": "Men",
+      "brand": "Armani"
+    },
+    {
+      "image": "../../static/img/Mensimg/versacehom.jpeg",
+      "productId": 13,
+      "title": "Versace Dylan Blue For Men Edt Spray 1 Oz By Gianni Versace",
+      "price": 25.82,
+      "productType": "Cologne",
+      "productCategory": "Men",
+      "brand": "Versace"
+    },
+    {
+      "image": "../../static/img/Mensimg/bvlgari.jpg",
+      "productId": 14,
+      "title": "Bvlgari Man Extreme For Men Edt Spray 3.4 Oz By Bvlgari",
+      "price": 99.40,
+      "productType": "Cologne",
+      "productCategory": "Men",
+      "brand": "Bvlgari"
+    },
+    {
+      "image": "../../static/img/Mensimg/gucciguilty.jpg",
+      "productId": 15,
+      "title": "Gucci Guilty Eau Pour Homme Eau De Toilette Spray 3.0 Oz / 90 Ml",
+      "price": 43.00,
+      "productType": "Cologne",
+      "productCategory": "Men",
+      "brand": "Gucci"
+    },
+    {
+      "image": "../../static/img/Mensimg/clive.jpg",
+      "productId": 16,
+      "title": "Clive Christian Original Collection X Masculine, 3.4 oz./ 100 mL, Men's",
+      "price": 575.00,
+      "productType": "Cologne",
+      "productCategory": "Men",
+      "brand": "Clive Christian"
+    },
+    {
+      "image": "../../static/img/Mensimg/yvessaint.jpg",
+      "productId": 17,
+      "title": "L'homme Yves Saint Laurent For Men Edt Spray 3.3 Oz",
+      "price": 50.39,
+      "productType": "Cologne",
+      "productCategory": "Men",
+      "brand": "Yves Saint Laurent"
+    },
+    {
+      "image": "../../static/img/Mensimg/montblanc.jpg",
+      "productId": 18,
+      "title": "Mont Blanc Legend Cologne for Men Eau De Toilette - 3.3 oz",
+      "price": 38.99,
+      "productType": "Cologne",
+      "productCategory": "Men",
+      "brand": "Mont Blanc"
+    }
+  ]
+}
