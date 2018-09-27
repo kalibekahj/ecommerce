@@ -84,65 +84,8 @@ const brandOptions = [
   }
 ]
 
-class Products extends React.Component {
-  state = {
-    products: [],
-    filterArray: [],
-    price: []
-  };
+const Products = (props) => {
 
-  componentDidMount() {
-    fetch("http://localhost:3004/products")
-      .then(response => response.json())
-      .then(json =>
-        this.setState({
-          products: json,
-          filterArray: json
-        })
-      );
-  }
-  // accept array of products & returns products filtered by brand
-  getFilteredByBrand = products => {
-    let brandValue = document.querySelector(".brand-options").value;
-
-    return products.filter(product => {
-      if (brandValue === "showAll") {
-        return true;
-      } else {
-        return product.brand === brandValue;
-      }
-    });
-  };
-  // accept array of products & returns products filtered by price
-  getFilteredByPrice = products => {
-    let price = document.querySelector(".price-options").value;
-
-    return products.filter(product => {
-      if (Number(price) === 30) {
-        return product.price <= price;
-      } else if (Number(price) === 50) {
-        return product.price >= 30 && product.price < price;
-      } else if (Number(price) === 100) {
-        return product.price > 50 && product.price <= 100;
-      } else if (Number(price) === 600) {
-        return product.price >= 100 && product.price <= price;
-      } else {
-        return true;
-      }
-    });
-  };
-
-  onChangeFilter = (e) => {
-    console.log(e);
-    let results = this.getFilteredByBrand(this.state.products);
-    results = this.getFilteredByPrice(results);
-
-    this.setState({
-      filterArray: results
-    });
-  };
-
-  render() {
     return (
       <div>
         <div className="container-three">
@@ -152,18 +95,17 @@ class Products extends React.Component {
               <h2>Shop by</h2>
               <hr />
               <div>
-                <div>
-                  
+                <div>  
                   <span>Price</span>
-                  <Select className="price-options" options={priceOptions} onChange={this.onChangeFilter} />
+                  <Select className="price-options" options={priceOptions} onChange={props.onChangeFilter} />
                 </div>
-                <Select className="brand-options" options={brandOptions} onChange={this.onChangeFilter} />
+                <Select className="brand-options" options={brandOptions} onChange={props.onChangeFilter} />
               </div>
             </div>
           </div>
         </div>
         <div className="row">
-          {this.state.filterArray.map((product, i) => {
+          {props.products.map((product, i) => {
             return (
               <div key={i} className="row__card">
                 <img src={product.image} className="product-images" alt="" />
@@ -178,6 +120,5 @@ class Products extends React.Component {
       </div>
     );
   }
-}
 
 export default Products;

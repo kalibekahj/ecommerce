@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import auth0Client from "../../Auth";
 import "../../App.css";
 
 class Header extends React.Component {
@@ -9,9 +10,7 @@ class Header extends React.Component {
         <header className="App-header">
           <nav>
             <h1 className="App-title" title="Go to Jonesing">
-            <Link to="/ ">
-              Jonesing
-              </Link>
+              <Link to="/ ">Jonesing</Link>
             </h1>
             <ul className="links">
               <li>
@@ -35,13 +34,41 @@ class Header extends React.Component {
                   Contact
                 </Link>
               </li>
+              <li>
+                <span className="divider" />
+              </li>
+              <li className="nav__list-item">
+                {auth0Client.isAuthenticated() ? (
+                  <li>
+                    <Link to="/Admin" title="Admin">
+                      Admin
+                    </Link>
+                  </li>
+                ) : null}
+              </li>
             </ul>
           </nav>
-
           <div className="join">
             <ol>
               <li>
-                <a href="">Sign Up</a>
+                {!auth0Client.isAuthenticated() && (
+                  <button className="btn btn-dark" onClick={auth0Client.signIn}>
+                    Sign In
+                  </button>
+                )}
+                {auth0Client.isAuthenticated() && (
+                  <div>
+                    <label className="mr-2 text-white">
+                      {auth0Client.getProfile().name}
+                    </label>
+                    <button
+                      className="btn btn-dark"
+                      onClick={auth0Client.signOut}
+                    >
+                      Sign Out
+                    </button>
+                  </div>
+                )}
               </li>
             </ol>
           </div>
@@ -64,15 +91,15 @@ class Header extends React.Component {
                 </svg>
               </li>
               <li title="Filter">
-              <Link to="/Products">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="30"
-                  viewBox="0 0 48 48"
-                >
-                  <path d="M20 36h8v-4h-8v4zM6 12v4h36v-4H6zm6 14h24v-4H12v4z" />
-                </svg>
+                <Link to="/Products">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="30"
+                    viewBox="0 0 48 48"
+                  >
+                    <path d="M20 36h8v-4h-8v4zM6 12v4h36v-4H6zm6 14h24v-4H12v4z" />
+                  </svg>
                 </Link>
               </li>
               <li title="Shopping Cart">

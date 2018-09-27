@@ -63,14 +63,12 @@ div.container {
   display: flex;
 }
 .App-title {
+  cursor: pointer;
   font-family: cursive;
   font-size: 30px;
   margin-left: 2%;
   margin-right: 62%;
   margin-top: 0%;
-}
-h1:hover {
-  cursor: pointer;
 }
 .search-bar {
   block-size: 20px;
