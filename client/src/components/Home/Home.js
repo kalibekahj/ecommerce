@@ -10,8 +10,8 @@ class Home extends React.Component {
         <p className="opening-statement">Look the best. Smell the best.</p>
 
         <div id="slideshow">
-          <div class="slide-wrapper">
-            <div class="slide">
+          <div className="slide-wrapper">
+            <div className="slide">
               <img
                 src="../../static/img/Womensimg/chanel3.jpg"
                 alt=""
@@ -21,7 +21,7 @@ class Home extends React.Component {
                 N°5 Eau De Parfum Spray 1.2oz - Chanel
               </p>
             </div>
-            <div class="slide">
+            <div className="slide">
               <img
                 src="../../static/img/Womensimg/joydior.jpg"
                 alt=""
@@ -31,7 +31,7 @@ class Home extends React.Component {
                 Joy by Dior - Women's Perfume - Spray 1.0 oz
               </p>
             </div>
-            <div class="slide">
+            <div className="slide">
               <img
                 src="../../static/img/Mensimg/pradalr.jpeg"
                 alt=""
@@ -41,7 +41,7 @@ class Home extends React.Component {
                 Prada Men's Luna Rossa Sport Eau de Toilette Spray, 3.4 oz
               </p>
             </div>
-            <div class="slide">
+            <div className="slide">
               <img
                 src="../../static/img/Mensimg/sauvage.jpg"
                 alt=""

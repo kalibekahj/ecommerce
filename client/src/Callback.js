@@ -10,7 +10,7 @@ class Callback extends Component {
 
   render() {
     return (
-      <p>Loading profile...</p>
+      <p className="loading_statement">Loading profile...</p>
     );
   }
 }

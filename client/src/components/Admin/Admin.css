@@ -1,28 +1,113 @@
 .opener-h1 {
-  color: blue;
+  color: black;
   text-align: center;
 }
 .opener {
   text-align: end;
 }
+.loading_statement {
+  font-size: 30px;
+  text-align: center;
+}
+.btn.btn-dark {
+  cursor: pointer;
+  /* font-size: 10px;
+  padding: 5% 30%; */
+}
+.btn.btn-dark:hover{
+  background-color: darkgrey;
+  border-radius: 8%;
+}
 .btn_edit {
-  padding: 1%;
+  border-radius: 5%;
   font-size: 16px;
   margin-right: 9%;
+  padding: 1%;
 }
 .btn_edit:hover {
   color: #00bcd4;
   cursor: pointer;
 }
+h1 {
+  font-size: 33px;
+}
+#show-product-modal, #show-add-modal, #show-delete-modal{
+  display: block;
+  position: fixed;
+  top: 20%;
+  text-align: center;
+  background-color: aliceblue;
+  border: 1px solid black;
+  border-radius: 1%;
+  z-index: 1;
+}
+#show-product-modal {
+  padding: 6%;
+  margin-left: 35%;
+}
+#show-add-modal {
+  padding: 6%;
+  margin-left: 35%;
+  width: 21.5%;
+  height: 317px;
+}
+#show-delete-modal {
+  padding: 3%;
+  margin-left: 22%;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+.btn_submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%; 
+  padding: 1% 5%;
+}
+.btn.save, .btn.cancel {
+  border-radius: 5%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  text-align: center;
+}
+.btn.save, .btn_yes {
+  background-color: #169e33;
+  margin-right: 5%;
+}
+.btn.cancel, .btn_cancel {
+  background-color: red;
+  margin-left: 5%;
+}
+.btn.save:hover{
+  background-color: green;
+}
+.btn.cancel:hover{ 
+  background-color: #d80a0a;
+}
+.btn_yes {
+  padding: 1% 3%;
+}
+.btn_cancel {
+  padding: 1%;
+}
+.btn_yes, .btn_cancel {
+  font-size: 16px;
+}
+.btn_yes:hover, .btn_cancel:hover  {
+  cursor: pointer;
+}
 .admin_label {
-    height: 100px;
-    display: flex;
-    text-align: center;
-    width: 1130px;
-    box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
-    margin: 25px auto 0;
-    justify-content: space-around;
-    align-items: center;
+  height: 100px;
+  display: flex;
+  text-align: center;
+  width: 1130px;
+  box-shadow: 0 0 30px 0 rgba(95, 93, 93, 0.15);
+  margin: 25px auto 0;
+  justify-content: space-around;
+  align-items: center;
 }
 .row__adminCard {
   display: flex;
@@ -34,9 +119,8 @@
   align-items: center;
 }
 .admin_images {
-  height: 150px;
-  width: 150px;
-
+  height: 100px;
+  width: 100px;
 }
 .admin_title {
   color: black;
@@ -46,3 +130,18 @@
 .admin_productType {
   color: black;
 }
+.btn_add:hover {
+  background-color: green;
+  cursor: pointer;
+}
+.btn_delete:hover {
+  background-color: red;
+  cursor: pointer;
+}
+.btn_add,
+.btn_delete {
+  border: 1px solid black;
+  border-radius: 15%;
+  font-size: 15px;
+}
+

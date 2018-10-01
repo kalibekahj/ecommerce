@@ -46,7 +46,7 @@ body {
 .App-header {
   background-color: #00BCD4;
   border-radius: 0.5%;
-  height: 170px;
+  height: 120px;
   margin-bottom: 5%;
   opacity: 1.5;
   padding: 20px;
@@ -127,13 +127,18 @@ div.join {
 display: flex;
 justify-content: flex-end;
 }
+/* .btn.btn-dark {
+  cursor: pointer; */
+  /* font-size: 10px;
+  padding: 5% 30%; */
+/* } */
 .divide {
   color: turquoise;
 }
 ol {
   display: flex;
   list-style: none;
-  margin-right: 1%;
+  /* margin-right: 1%; */
 }
 .hero-image{
   border-bottom: 1px solid;
@@ -285,7 +290,7 @@ div.container-five {
   font-weight: bold;
   text-transform: uppercase;
 }
-form {
+.form_contact {
   margin-right: -8%;
   margin-top: 2%;
 }

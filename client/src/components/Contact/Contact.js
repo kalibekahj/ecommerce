@@ -3,10 +3,6 @@ import "../../App.css";
 
 class Contact extends React.Component {
 
-  // submitHandler= () => {
-
-  // }
-
   render() {
     return (
       <div>
@@ -30,7 +26,7 @@ class Contact extends React.Component {
           </p>
         </div>
 
-        <form action="#" method="post" onSubmit={()=>this.submitHandler}>
+        <form action="#" method="post" className="form_contact">
           <div className="form-input">
             <label htmlFor="firstName" className="form-label">
               First Name:

@@ -8,6 +8,9 @@ import Contact from "./components/Contact/Contact";
 import Admin from "./components/Admin/Admin";
 import Footer from "./components/Footer/Footer";
 import Callback from "./Callback";
+// import EditModel from "./components/Admin/EditModel/EditModel";
+// import AddModel from "./components/Admin/AddModel/AddModel";
+// import DeleteModel from "./components/Admin/DeleteModel/DeleteModel";
 
 class App extends Component {
   constructor() {
@@ -70,7 +73,7 @@ class App extends Component {
       filterArray: results
     });
   };
-
+  
   render() {
     return (
       <Router>
@@ -92,10 +95,7 @@ class App extends Component {
             <Route
               path="/admin"
               render={() => (
-                <Admin
-                  products={this.state.products}
-                  
-                />
+                <Admin products={this.state.products} component={Admin} />
               )}
             />
             <Route exact path="/callback" component={Callback} />

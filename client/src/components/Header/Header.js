@@ -48,35 +48,11 @@ class Header extends React.Component {
               </li>
             </ul>
           </nav>
-          <div className="join">
-            <ol>
-              <li>
-                {!auth0Client.isAuthenticated() && (
-                  <button className="btn btn-dark" onClick={auth0Client.signIn}>
-                    Sign In
-                  </button>
-                )}
-                {auth0Client.isAuthenticated() && (
-                  <div>
-                    <label className="mr-2 text-white">
-                      {auth0Client.getProfile().name}
-                    </label>
-                    <button
-                      className="btn btn-dark"
-                      onClick={auth0Client.signOut}
-                    >
-                      Sign Out
-                    </button>
-                  </div>
-                )}
-              </li>
-            </ol>
-          </div>
           <div className="container">
             <input
               className="search-bar"
               type="text"
-              placeholder="Search Xotic"
+              placeholder="Search Jonesing"
             />
             <input className="submit" type="submit" value="Search" />
             <ul className="icon-tabs">
@@ -113,6 +89,33 @@ class Header extends React.Component {
                 </svg>
               </li>
             </ul>
+            <div className="join">
+              <ol>
+                <li>
+                  {!auth0Client.isAuthenticated() && (
+                    <button
+                      className="btn btn-dark"
+                      onClick={auth0Client.signIn}
+                    >
+                      Sign In
+                    </button>
+                  )}
+                  {auth0Client.isAuthenticated() && (
+                    <div>
+                      <label className="mr-2 text-white">
+                        {auth0Client.getProfile().name}
+                      </label>
+                      <button
+                        className="btn btn-dark"
+                        onClick={auth0Client.signOut}
+                      >
+                        Sign Out
+                      </button>
+                    </div>
+                  )}
+                </li>
+              </ol>
+            </div>
           </div>
         </header>
       </div>
