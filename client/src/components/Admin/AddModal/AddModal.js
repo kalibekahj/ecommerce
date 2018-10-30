@@ -2,10 +2,9 @@ import React from "react";
 import "../Admin.css";
 
 const AddModal = (props) => {
-
   return (
     <div id="show-add-modal" className="admin_modal">
-      <form action="#" method="put" className="form-container">
+      <form method="put" className="form-container">
         <h1>Edit a Product</h1>
 
         <label htmlFor="image">
@@ -33,10 +32,10 @@ const AddModal = (props) => {
         </label>
         <input type="number" placeholder="Enter Price" name="price" required />
 
-        <label htmlFor="id">
+        {/* <label htmlFor="id">
           <b>Id</b>
         </label>
-        <input type="number" placeholder="Enter Id #" name="productId" required />
+        <input type="number" placeholder="Enter Id #" name="productId" required /> */}
         <div className="btn_submit">
           <button type="submit" className="btn save">
             Save
@@ -44,7 +43,7 @@ const AddModal = (props) => {
           <button
             type="button"
             className="btn cancel"
-            onClick={props.onClose}
+            onClick={props.onClose} // Will close modal when clicked
           >
             Close
           </button>

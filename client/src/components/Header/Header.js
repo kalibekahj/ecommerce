@@ -39,11 +39,11 @@ class Header extends React.Component {
               </li>
               <li className="nav__list-item">
                 {auth0Client.isAuthenticated() ? (
-                  <li>
+                  // <li>
                     <Link to="/Admin" title="Admin">
                       Admin
                     </Link>
-                  </li>
+                  // </li>
                 ) : null}
               </li>
             </ul>

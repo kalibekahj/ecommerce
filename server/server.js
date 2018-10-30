@@ -6,6 +6,7 @@ const cors = require("cors");
 app.use(cors());
 
 //products model
+var ObjectID = require("mongodb").ObjectID;
 const Products = require("./models/Products");
 const Contact = require("./models/Contact");
 // const Admin = require("./models/Admin");
@@ -17,8 +18,6 @@ app.use(
     extended: true
   })
 );
-// app.get("/", (req, res) => res.send("hello"));
-
 // GET:
 mongoose
   .connect(
@@ -83,38 +82,6 @@ app.post("/contact", (req, res) => {
   newContact.save().then(results => res.json(results));
 });
 
-// EditModel
-
-// app.post("/products", (req, res) => {
-//   const {
-//     image,
-//     productId,
-//     title,
-//     price,
-//     productType,
-//     productCategory,
-//     brand
-//   } = req.body;
-//   const newEdit = new Edit({
-//     image,
-//     productId,
-//     title,
-//     price,
-//     productType,
-//     productCategory,
-//     brand
-//   });
-//   newEdit.save().then(results => res.json(results));
-// });
-
-// app.get("/admin", (req, res) => {
-//   // we want to return all forms in the
-//   // admin form
-//   // Admin.find()
-//   Products.find()
-//     .then(results => res.json(results))
-//     .catch(err => res.status(404).json({ success: false }));
-// });
 app.post("/admin", (req, res) => {
   console.log(req.body);
   const { image, title, productType, price, productId } = req.body;
@@ -125,29 +92,32 @@ app.post("/admin", (req, res) => {
     price,
     productId
   });
-  newProduct.save().then(() => res.sendStatus(201));
+  newProduct.save().then(results => res.json(results));
 });
 
-app.put("/admin", (req, res) => {
+app.put("/admin/:id", (req, res) => {
   console.log(req.body);
   const { image, title, productType, price, productId } = req.body;
-  const newProduct = new Products({
+  const newProduct = {
     image,
     title,
     productType,
-    price,
-    productId
-  });
-  newProduct.save().then(() => res.sendStatus(200));
+    price
+  };
+  Products.findByIdAndUpdate(productId, newProduct, (err, product) => {
+    if (err) return err;
+    return product;
+  })
+    .then(product => res.json(product))
+    .catch(err => res.sendStatus(500));
 });
 
 app.delete("/admin/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  const filteredProducts = products.filter(admin => products.id !== id);
-  if (filteredProducts.length === products.length) {
-    return res.status(404).send("Unable to find ID");
-  }
-
+  Products.findByIdAndDelete(req.params.id, err => {
+    if (err) return err;
+  })
+    .then(() => res.sendStatus(200))
+    .catch(err => res.sendStatus(500));
 });
 
 app.listen(3004);

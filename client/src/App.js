@@ -8,9 +8,6 @@ import Contact from "./components/Contact/Contact";
 import Admin from "./components/Admin/Admin";
 import Footer from "./components/Footer/Footer";
 import Callback from "./Callback";
-// import EditModel from "./components/Admin/EditModel/EditModel";
-// import AddModel from "./components/Admin/AddModel/AddModel";
-// import DeleteModel from "./components/Admin/DeleteModel/DeleteModel";
 
 class App extends Component {
   constructor() {
@@ -73,7 +70,32 @@ class App extends Component {
       filterArray: results
     });
   };
-  
+
+  // Allows product to be added without refreshing the page
+  onAddProduct = p => {
+    this.setState({
+      products: [...this.state.products, p]
+    });
+  };
+// Allows product to be edited without refreshing the page
+  onEditProduct = p => {
+    let newProducts = [...this.state.products];
+    const i = newProducts.findIndex(product => product._id === p._id);
+    newProducts.splice(i, 1, p);
+    this.setState({
+      products: newProducts
+    });
+  };
+// Allows product to be deleted without refreshing the page
+  onDeleteProduct = id => {
+    let newProducts = [...this.state.products];
+    const i = newProducts.findIndex(product => product._id === id);
+    newProducts.splice(i, 1); 
+    this.setState({
+      products: newProducts
+    });
+  }
+
   render() {
     return (
       <Router>
@@ -95,7 +117,13 @@ class App extends Component {
             <Route
               path="/admin"
               render={() => (
-                <Admin products={this.state.products} component={Admin} />
+                <Admin
+                  products={this.state.products}
+                  onAddProduct={this.onAddProduct}
+                  onEditProduct={this.onEditProduct}
+                  onDeleteProduct={this.onDeleteProduct}
+                  component={Admin}
+                />
               )}
             />
             <Route exact path="/callback" component={Callback} />
